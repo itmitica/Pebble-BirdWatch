@@ -1,0 +1,76 @@
+{
+    "author": "Dumitru Ungureanu",
+    "dependencies": {},
+    "keywords": [],
+    "name": "itmitica-bebasneue-forque",
+    "pebble": {
+        "capabilities": [
+            "location"
+        ],
+        "displayName": "BebasNeue Forque - itmitica",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/wallpaper.png",
+                    "name": "IMAGE_WALLPAPER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/screenshot_watchface.png",
+                    "name": "IMAGE_SCREENSHOT_WATCHFACE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/screenshot_screenface.png",
+                    "name": "IMAGE_SCREENSHOT_SCREENFACE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/screenface.png",
+                    "name": "IMAGE_SCREENFACE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "fonts/Forque.ttf",
+                    "name": "font_Forque_21",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/BebasNeue.otf",
+                    "name": "font_BebasNeue_36",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/BebasNeue.otf",
+                    "name": "font_BebasNeue_40",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/BebasNeue.otf",
+                    "name": "font_BebasNeue_61",
+                    "targetPlatforms": null,
+                    "type": "font"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite"
+        ],
+        "uuid": "a849d566-1e05-4ab6-894b-ac3b972f656a",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.7.0"
+}
