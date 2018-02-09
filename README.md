@@ -3,7 +3,7 @@ Pebble Watchface
 
 Elegant Bird Watch
 
-https://apps.getpebble.com/en_US/application/5a77514d0dfc321c120024d7
+https://apps.getpebble.com/applications/5a7e2bec461a8d2dd0002511
 
 ![ScreenShot](/resources/images/screenshot_screenface.png)
 ![ScreenShot](/resources/images/screenshot_watchface.png)
