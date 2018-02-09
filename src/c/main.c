@@ -46,7 +46,7 @@ void update_date() {
   static char day[25];
   
     // Write the current date into the buffer
-    strftime(date, sizeof(date), "%e %b  ", tick_time);
+    strftime(date, sizeof(date), "%e %b", tick_time);
     
     // Write the current day into the buffer
     strftime(day, sizeof(day), "%A", tick_time);
@@ -94,10 +94,10 @@ void update_time() {
   // Write the current hours and minutes into the buffer
   if(clock_is_24h_style() == true) {
     //Use 24h hour format
-    strftime(time, sizeof("00:00 "), "%H:%M ", tick_time);
+    strftime(time, sizeof("00:00"), "%H:%M", tick_time);
   } else {
     //Use 12 hour format
-    strftime(time, sizeof("00:00 "), "%I:%M ", tick_time);
+    strftime(time, sizeof("00:00"), "%I:%M", tick_time);
   }
   
   // Display this time on the TextLayer
@@ -107,7 +107,7 @@ void update_time() {
     update_date();
   }
   
-  bitmap_layer_set_bitmap(Screenface, s_res_image_screenface);
+//   bitmap_layer_set_bitmap(Screenface, s_res_image_screenface);
   
 }
   
@@ -124,18 +124,18 @@ void main_window_load(Window *window) {
   // Date Text
   DateText = text_layer_create(GRect(0, 4, 140, 46));
   text_layer_set_background_color(DateText, GColorClear);
-  text_layer_set_text_color(DateText, GColorBlack);
-  DateFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_BebasNeue_36));
+  text_layer_set_text_color(DateText, GColorClear);
+  DateFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_Louis_George_Cafe_32));
   text_layer_set_font(DateText, DateFont);
   text_layer_set_text_alignment(DateText, GTextAlignmentRight);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(DateText));
 
     // Day Text
-  DayText = text_layer_create(GRect(5, 50, 136, 26));
+  DayText = text_layer_create(GRect(0, 50, 144, 26));
   text_layer_set_background_color(DayText, GColorClear);
-  text_layer_set_text_color(DayText, GColorBlack);
-  text_layer_set_text(DayText, "M  T  W  T  F  S  S   ");
-  DayFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_Forque_21));
+  text_layer_set_text_color(DayText, GColorClear);
+  text_layer_set_text(DayText, "M T W T F S S");
+  DayFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_Louis_George_Cafe_Bold_18));
   text_layer_set_font(DayText, DayFont);
   text_layer_set_text_alignment(DayText, GTextAlignmentRight);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(DayText));
@@ -143,28 +143,27 @@ void main_window_load(Window *window) {
     // Line Text
   LineText = text_layer_create(GRect(-3, 52, 40, 40));
   text_layer_set_background_color(LineText, GColorClear);
-  text_layer_set_text_color(LineText, GColorBlack);
+  text_layer_set_text_color(LineText, GColorClear);
   text_layer_set_text(LineText, "-");
-  LineFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_BebasNeue_40));
+  LineFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_Louis_George_Cafe_32));
   text_layer_set_font(LineText, LineFont);
   text_layer_set_text_alignment(LineText, GTextAlignmentRight);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(LineText));
   
     // Line Text 2
-  LineText2 = text_layer_create(GRect(-3, 55, 40, 40));
+  LineText2 = text_layer_create(GRect(-3, 53, 40, 40));
   text_layer_set_background_color(LineText2, GColorClear);
-  text_layer_set_text_color(LineText2, GColorWhite);
+  text_layer_set_text_color(LineText2, GColorClear);
   text_layer_set_text(LineText2, "-");
-//   LineFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_BebasNeue_40));
   text_layer_set_font(LineText2, LineFont);
   text_layer_set_text_alignment(LineText2, GTextAlignmentRight);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(LineText2));
   
   // Time Text
-  TimeText = text_layer_create(GRect(0, 94, 144, 64));
+  TimeText = text_layer_create(GRect(0, 94, 140, 64));
   text_layer_set_background_color(TimeText, GColorClear);
   text_layer_set_text_color(TimeText, GColorClear);
-  TimeFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_BebasNeue_61));
+  TimeFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_Louis_George_Cafe_48));
   text_layer_set_font(TimeText, TimeFont);
   text_layer_set_text_alignment(TimeText, GTextAlignmentRight);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(TimeText));
@@ -173,7 +172,7 @@ void main_window_load(Window *window) {
   // Screenface
   Screenface = bitmap_layer_create(GRect(0, 0, 144, 168));
   bitmap_layer_set_bitmap(Screenface, s_res_image_screenface);
-  layer_add_child(window_get_root_layer(window), (Layer *)Screenface);
+//   layer_add_child(window_get_root_layer(window), (Layer *)Screenface);
   
   
   // Make sure date and time are displayed from the start
