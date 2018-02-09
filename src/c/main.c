@@ -60,23 +60,23 @@ void update_date() {
     int weekdaytowidth = 0;
   
     if (today == 6) {
-      weekdaytowidth = 134;
+      weekdaytowidth = 145;
     } else if(today == 5) {
-      weekdaytowidth = 117;
+      weekdaytowidth = 126;
     } else if (today == 4) {
-      weekdaytowidth = 101;
+      weekdaytowidth = 105;
     } else if (today == 3) {
-      weekdaytowidth = 87;
+      weekdaytowidth = 86;
     } else if (today == 2) {
-      weekdaytowidth = 69;
+      weekdaytowidth = 63;
     } else if (today == 1) {
-      weekdaytowidth = 51;
+      weekdaytowidth = 38;
     } else {
-      weekdaytowidth = 32;
+      weekdaytowidth = 16;
     }
     
-    text_layer_set_size(LineText, GSize(weekdaytowidth, 40));
-    text_layer_set_size(LineText2, GSize(weekdaytowidth, 40));
+    text_layer_set_size(LineText, GSize(weekdaytowidth, 32));
+    text_layer_set_size(LineText2, GSize(weekdaytowidth, 32));
   
 //   APP_LOG(APP_LOG_LEVEL_DEBUG, "Returned week day: %s", day);
 //   APP_LOG(APP_LOG_LEVEL_DEBUG, "Returned week day: %d", strcmp(day, "Thursday"));
@@ -107,7 +107,7 @@ void update_time() {
     update_date();
   }
   
-//   bitmap_layer_set_bitmap(Screenface, s_res_image_screenface);
+  bitmap_layer_set_bitmap(Screenface, s_res_image_screenface);
   
 }
   
@@ -122,7 +122,7 @@ void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), (Layer *)Wallpaper);
  
   // Date Text
-  DateText = text_layer_create(GRect(0, 4, 140, 46));
+  DateText = text_layer_create(GRect(0, 12, 140, 46));
   text_layer_set_background_color(DateText, GColorClear);
   text_layer_set_text_color(DateText, GColorClear);
   DateFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_Louis_George_Cafe_32));
@@ -131,7 +131,7 @@ void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(DateText));
 
     // Day Text
-  DayText = text_layer_create(GRect(0, 50, 144, 26));
+  DayText = text_layer_create(GRect(0, 58, 144, 26));
   text_layer_set_background_color(DayText, GColorClear);
   text_layer_set_text_color(DayText, GColorClear);
   text_layer_set_text(DayText, "M T W T F S S");
@@ -141,7 +141,7 @@ void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(DayText));
   
     // Line Text
-  LineText = text_layer_create(GRect(-3, 52, 40, 40));
+  LineText = text_layer_create(GRect(0, 59, 32, 32));
   text_layer_set_background_color(LineText, GColorClear);
   text_layer_set_text_color(LineText, GColorClear);
   text_layer_set_text(LineText, "-");
@@ -151,7 +151,7 @@ void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(LineText));
   
     // Line Text 2
-  LineText2 = text_layer_create(GRect(-3, 53, 40, 40));
+  LineText2 = text_layer_create(GRect(0, 60, 32, 32));
   text_layer_set_background_color(LineText2, GColorClear);
   text_layer_set_text_color(LineText2, GColorClear);
   text_layer_set_text(LineText2, "-");
@@ -160,7 +160,7 @@ void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(LineText2));
   
   // Time Text
-  TimeText = text_layer_create(GRect(0, 94, 140, 64));
+  TimeText = text_layer_create(GRect(0, 106, 140, 64));
   text_layer_set_background_color(TimeText, GColorClear);
   text_layer_set_text_color(TimeText, GColorClear);
   TimeFont = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_font_Louis_George_Cafe_48));
@@ -172,7 +172,7 @@ void main_window_load(Window *window) {
   // Screenface
   Screenface = bitmap_layer_create(GRect(0, 0, 144, 168));
   bitmap_layer_set_bitmap(Screenface, s_res_image_screenface);
-//   layer_add_child(window_get_root_layer(window), (Layer *)Screenface);
+  layer_add_child(window_get_root_layer(window), (Layer *)Screenface);
   
   
   // Make sure date and time are displayed from the start
