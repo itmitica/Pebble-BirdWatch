@@ -52,15 +52,15 @@
                     "type": "font"
                 },
                 {
-                    "characterRegex": "[0-9:]",
                     "file": "fonts/Louis_George_Cafe.ttf",
-                    "name": "font_Louis_George_Cafe_48",
+                    "name": "font_Louis_George_Cafe_32",
                     "targetPlatforms": null,
                     "type": "font"
                 },
                 {
+                    "characterRegex": "[0-9:]",
                     "file": "fonts/Louis_George_Cafe.ttf",
-                    "name": "font_Louis_George_Cafe_32",
+                    "name": "font_Louis_George_Cafe_48",
                     "targetPlatforms": null,
                     "type": "font"
                 }
@@ -75,5 +75,5 @@
             "watchface": true
         }
     },
-    "version": "1.1.0"
+    "version": "1.2.0"
 }
