@@ -6295,8 +6295,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.96362361"
-     inkscape:cx="-28.880003"
-     inkscape:cy="31.853511"
+     inkscape:cx="-233.31667"
+     inkscape:cy="29.778012"
      inkscape:document-units="px"
      inkscape:current-layer="svg8"
      showgrid="false"
@@ -6341,14 +6341,14 @@
   </g>
   <g
      id="g7980"
-     transform="matrix(0.26458333,0,0,0.26458333,-259.24732,80.174465)">
+     transform="matrix(0.26458333,0,0,0.26458333,-259.24732,81.232797)">
     <g
        id="g8084"
        style="fill:#ffffff;stroke-width:3.55400705"
        transform="matrix(0.28137254,0,0,0.28137254,985.79244,-299.01089)">
       <polygon
          id="polygon7942"
-         points="261,530.397 218.333,533.063 229,382.396 179.666,272.396 242.333,349.729 321,267.063 260.333,381.729 "
+         points="218.333,533.063 229,382.396 179.666,272.396 242.333,349.729 321,267.063 260.333,381.729 261,530.397 "
          style="fill:#ffffff;stroke-width:3.55400705" />
       <path
          id="path7944"
